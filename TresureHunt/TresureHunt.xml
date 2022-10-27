@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TresureHunt</name>
+    </assembly>
+    <members>
+        <member name="T:TresureHunt.InteractivePlayer">
+            <summary>
+            <inheritdoc/>
+            An interactive player has support for console input outputs.
+            </summary>
+        </member>
+        <member name="M:TresureHunt.InteractivePlayer.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TresureHunt.InteractivePlayer"/> class.
+            </summary>
+            <param name="name">The name of the player.</param>
+            <param name="mobile">The mobile phone number of the player.</param>
+        </member>
+        <member name="P:TresureHunt.InteractivePlayer.Create">
+            <summary>
+            Gets a new <see cref="T:TresureHunt.InteractivePlayer"/> using the console.
+            </summary>
+        </member>
+        <member name="M:TresureHunt.InteractivePlayer.PlayerInput(TresureHunt.TresureHuntRound)">
+            <summary>
+            Gets the player's input for this round of tresure hunt.
+            </summary>
+            <param name="tresureHuntRound">The round that the players are to be added to.</param>
+        </member>
+        <member name="M:TresureHunt.InteractivePlayer.GetPlayerToChooseTheirCells(TresureHunt.TresureHuntRound)">
+            <summary>
+            Requests the user to select an empty cell to mark their name and contact details now on.
+            </summary>
+            <param name="tresureHuntRound">The round for the user to select a cell on.</param>
+        </member>
+        <member name="T:TresureHunt.Player">
+            <summary>
+            The class representing someone who can be marked down in a square for the tresure hunt.
+            </summary>
+        </member>
+        <member name="M:TresureHunt.Player.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TresureHunt.Player"/> class.
+            </summary>
+            <param name="name">The name of the player.</param>
+            <param name="mobile">The mobile phone number of the player.</param>
+        </member>
+        <member name="P:TresureHunt.Player.Name">
+            <summary>
+            Gets or sets.
+            </summary>
+        </member>
+        <member name="P:TresureHunt.Player.Mobile">
+            <summary>
+            Gets or sets.
+            </summary>
+        </member>
+        <member name="M:TresureHunt.Player.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:TresureHunt.Player.GetRandomPlayers">
+            <summary>
+            Gets a collection of random <see cref="T:TresureHunt.Player"/>s.
+            </summary>
+            <returns>Returns a collection of <see cref="T:TresureHunt.Player"/>.</returns>
+        </member>
+        <member name="T:TresureHunt.Program">
+            <summary>
+            Class initliased by the framework.
+            </summary>
+        </member>
+        <member name="T:TresureHunt.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TresureHunt.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TresureHunt.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TresureHunt.Properties.Resources.RandomNames">
+             <summary>
+               Looks up a localized string similar to &quot;First Name&quot;,&quot;Last Name&quot;
+            &quot;Martin&quot;,&quot;Parker&quot;
+            &quot;Lucia&quot;,&quot;Bailey&quot;
+            &quot;Catherine&quot;,&quot;Wilson&quot;
+            &quot;Daryl&quot;,&quot;Craig&quot;
+            &quot;Fiona&quot;,&quot;Lloyd&quot;
+            &quot;Gianna&quot;,&quot;Parker&quot;
+            &quot;Carlos&quot;,&quot;Chapman&quot;
+            &quot;Adrianna&quot;,&quot;Morgan&quot;
+            &quot;Amy&quot;,&quot;Campbell&quot;
+            &quot;Daisy&quot;,&quot;Fowler&quot;
+            &quot;Florrie&quot;,&quot;Martin&quot;
+            &quot;Myra&quot;,&quot;Robinson&quot;
+            &quot;Julian&quot;,&quot;Alexander&quot;
+            &quot;Chloe&quot;,&quot;Mitchell&quot;
+            &quot;Alexia&quot;,&quot;Barrett&quot;
+            &quot;Thomas&quot;,&quot;Robinson&quot;
+            &quot;Camila&quot;,&quot;Grant&quot;
+            &quot;George&quot;,&quot;Williams&quot;
+            &quot;Darcy&quot;,&quot;Clark&quot;
+            &quot;Steven&quot;,&quot;West&quot;
+            &quot;Anna&quot;,&quot;Walker&quot;
+            &quot;Ada&quot;,&quot;Grant&quot;
+            &quot;Roman&quot;,&quot;Williams&quot;
+            &quot;Natalie&quot;,&quot;Douglas&quot;
+            &quot;Garry&quot;,&quot;Moore&quot;...
+             </summary>
+        </member>
+        <member name="T:TresureHunt.TresureHuntRound">
+            <summary>
+            Contains the data for each card.
+            </summary>
+        </member>
+        <member name="M:TresureHunt.TresureHuntRound.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TresureHunt.TresureHuntRound"/> class.
+            </summary>
+            <param name="height">Cells on the y axis of the table.</param>
+            <param name="width">Cells on the x axis of the table.</param>
+            <param name="maxSquaresPerPlayer">The maximum amount of cells one player can be marked down for.</param>
+        </member>
+        <member name="P:TresureHunt.TresureHuntRound.Card">
+            <summary>
+            Gets the table storing where each player has marked them self down for.
+            </summary>
+        </member>
+        <member name="P:TresureHunt.TresureHuntRound.Height">
+            <summary>
+            Gets the length of the arrays of cells inside of the array of arrays of cells.
+            </summary>
+        </member>
+        <member name="P:TresureHunt.TresureHuntRound.MaxSquaresPerPlayer">
+            <summary>
+            Gets or sets the number of cells one player can be in.
+            </summary>
+        </member>
+        <member name="P:TresureHunt.TresureHuntRound.Width">
+            <summary>
+            Gets the Length of the array of arrays of cells.
+            </summary>
+        </member>
+        <member name="P:TresureHunt.TresureHuntRound.Winner">
+            <summary>
+            Gets the winner of this round.
+            </summary>
+        </member>
+        <member name="P:TresureHunt.TresureHuntRound.MaxPersonWidth">
+            <summary>
+            Gets the max string width of all the players on the card.
+            </summary>
+        </member>
+        <member name="P:TresureHunt.TresureHuntRound.PlayerList">
+            <summary>
+            Gets the distinct players in this current round.
+            </summary>
+        </member>
+        <member name="M:TresureHunt.TresureHuntRound.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:TresureHunt.TresureHuntRound.AddRandomAmountOfRandomPeopleToCard">
+            <summary>
+            Slightly pre-fills the card with people, leaving a chance that the user will not be able to enter a value.
+            </summary>
+        </member>
+        <member name="M:TresureHunt.TresureHuntRound.TryAdd(System.Int32,System.Int32,TresureHunt.Player)">
+            <summary>
+            Trys to add the specified player to the specified position.
+            </summary>
+            <param name="x">The X coordinate of the cell.</param>
+            <param name="y">The Y coordinate of the cell.</param>
+            <param name="player">The player being added.</param>
+            <returns>Returns true if player is added.</returns>
+        </member>
+    </members>
+</doc>
